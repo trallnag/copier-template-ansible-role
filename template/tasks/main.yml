@@ -1,0 +1,6 @@
+- name: Do nothing
+  ansible.builtin.shell:
+    cmd: |
+      echo "Nothing to do."
+    executable: /usr/bin/bash
+  changed_when: false

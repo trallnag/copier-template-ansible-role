@@ -1,0 +1,9 @@
+_subdirectory: template
+
+role_name:
+  type: str
+  help: What is the role name?
+  validator: |
+    {% if not (role_name | regex_search("^[a-z]+[a-z0-9_]*[a-z]+$")) -%}
+      Role name does not match pattern: ^[a-z]+[a-z0-9_]*[a-z]+$
+    {%- endif -%}

@@ -1,0 +1,10 @@
+- name: Verify
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Get installed version
+      ansible.builtin.shell:
+        cmd: |
+          echo "Nothing to do."
+        executable: /usr/bin/bash
+      changed_when: false

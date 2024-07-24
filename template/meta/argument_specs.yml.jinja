@@ -1,0 +1,17 @@
+argument_specs:
+  main:
+    short_description: Main entry point
+    options:
+      {{ role_name }}_foo:
+        required: false
+        type: str
+        default: hello
+        description:
+          - Dummy option.
+
+      {{ role_name }}_bar:
+        required: false
+        type: str
+        default: world
+        description:
+          - Dummy option.
