@@ -11,7 +11,7 @@ Repositories based on this template:
 
 ## Contributing
 
-Made for my use only.
+Made for my (trallnag) personal use only.
 
 ## Licensing
 
