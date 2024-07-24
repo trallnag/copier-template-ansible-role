@@ -15,5 +15,6 @@ Made for my use only.
 
 ## Licensing
 
-This work is licensed under the [Unlicense](https://unlicense.org). See
+This work is licensed under the
+[Unlicense license](https://choosealicense.com/licenses/unlicense/). See
 [`LICENSE`](LICENSE) for the license text.
