@@ -38,12 +38,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: {% raw %}${{ env.PYTHON_VERSION }}{% endraw %}
 
       - name: Install Task
         uses: arduino/setup-task@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
 
       - name: Install mdformat
         run: pipx install mdformat
@@ -58,10 +58,10 @@ jobs:
         run: >-
           poetry run ansible-galaxy role import
           --server https://galaxy.ansible.com/api/
-          --token "${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}"
+          --token "{% raw %}${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}{% endraw %}"
           --role-name {{ role_name }}
-          ${{ github.event.repository.owner.login }}
-          ${{ github.event.repository.name }}
+          {% raw %}${{ github.event.repository.owner.login }}{% endraw %}
+          {% raw %}${{ github.event.repository.name }}{% endraw %}
 
       - name: Determine release version
         run: |
@@ -70,7 +70,7 @@ jobs:
 
       - name: Determine release name
         run: |
-          RELEASE_NAME="${{ env.RELEASE_VERSION }} / $(date +%Y-%m-%d)"
+          RELEASE_NAME="{% raw %}${{ env.RELEASE_VERSION }}{% endraw %} / $(date +%Y-%m-%d)"
           echo "RELEASE_NAME=$RELEASE_NAME" | tee -a "$GITHUB_ENV"
 
       - name: Extract release notes
@@ -79,6 +79,6 @@ jobs:
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          name: ${{ env.RELEASE_NAME }}
+          name: {% raw %}${{ env.RELEASE_NAME }}{% endraw %}
           body_path: tmp/release.md
           draft: true

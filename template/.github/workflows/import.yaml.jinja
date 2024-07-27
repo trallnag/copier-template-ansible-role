@@ -28,7 +28,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: {% raw %}${{ env.PYTHON_VERSION }}{% endraw %}
 
       - name: Install Poetry
         run: curl -sSL https://install.python-poetry.org | python -
@@ -40,7 +40,7 @@ jobs:
         run: >-
           poetry run ansible-galaxy role import
           --server https://galaxy.ansible.com/api/
-          --token "${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}"
+          --token "{% raw %}${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}{% endraw %}"
           --role-name {{ role_name }}
-          ${{ github.event.repository.owner.login }}
-          ${{ github.event.repository.name }}
+          {% raw %}${{ github.event.repository.owner.login }}{% endraw %}
+          {% raw %}${{ github.event.repository.name }}{% endraw %}
