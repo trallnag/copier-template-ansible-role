@@ -56,8 +56,6 @@ tasks:
     desc: Run tests.
     vars:
       scenario: '{{ .scenario | default "all" }}'
-    requires:
-      vars: [scenario]
     cmds:
       - >-
         {{- if eq .scenario "all" -}}
