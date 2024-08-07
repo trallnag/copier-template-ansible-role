@@ -32,3 +32,9 @@ Push it:
 git push origin master
 git push origin v$VERSION
 ```
+
+Done. In repositories that use this template:
+
+```sh
+copier update
+```
