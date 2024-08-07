@@ -20,6 +20,12 @@ Create the new tag:
 git tag -s v$VERSION -m ""
 ```
 
+Make sure that the tree looks good:
+
+```sh
+git log --graph --oneline --all -n 5
+```
+
 Push it:
 
 ```sh
