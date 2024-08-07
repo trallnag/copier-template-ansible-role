@@ -33,8 +33,10 @@ git push origin master
 git push origin v$VERSION
 ```
 
-Done. In repositories that use this template:
+Done. In repositories that use this template, update to the new version using
+for example the following command (for more information, check the
+[Copier documentation](https://copier.readthedocs.io/en/stable/updating/)):
 
 ```sh
-copier update
+copier update --defaults
 ```
