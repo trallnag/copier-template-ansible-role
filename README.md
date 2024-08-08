@@ -8,6 +8,7 @@ Repositories based on this template:
 - [trallnag/ansible-role-aws-cli](https://github.com/trallnag/ansible-role-aws-cli)
 - [trallnag/ansible-role-aws-sam-cli](https://github.com/trallnag/ansible-role-aws-sam-cli)
 - [trallnag/ansible-role-aws-ssm-plugin](https://github.com/trallnag/ansible-role-aws-ssm-plugin)
+- [trallnag/ansible-role-systemd-unit](https://github.com/trallnag/ansible-role-systemd-unit)
 
 ## Contributing
 
