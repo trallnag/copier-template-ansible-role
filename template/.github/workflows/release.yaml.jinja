@@ -86,7 +86,7 @@ jobs:
           uv run ansible-galaxy role import
           --server https://galaxy.ansible.com/api/
           --token "{% raw %}${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}{% endraw %}"
-          --role-name "{{ role_name }}"
+          --role-name {{ role_name }}
           "{% raw %}${{ github.event.repository.owner.login }}{% endraw %}"
           "{% raw %}${{ github.event.repository.name }}{% endraw %}"
 
