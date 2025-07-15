@@ -1,0 +1,8 @@
+[tools]
+
+#
+# Tools from the mise registry.
+#
+
+# Renovate: datasource=github-releases packageName=copier-org/copier
+copier = "9.7.1"
