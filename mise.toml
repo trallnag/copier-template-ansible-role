@@ -5,4 +5,4 @@
 #
 
 # Renovate: datasource=github-releases packageName=copier-org/copier
-copier = "9.7.1"
+copier = "9.17.1"
